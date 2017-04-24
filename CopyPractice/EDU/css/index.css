@@ -1,0 +1,457 @@
+#header {
+    height: 76px;
+    border-bottom: solid #93C47D 2px;
+}
+
+#header .menu {
+    float: left;
+}
+
+#header .page {
+    margin-left: 250px;
+    margin-top: 11px;
+}
+
+#header #logo {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 11px;
+}
+
+#header .title {
+    float: left;
+    padding-top: 15px;
+    text-align: center;
+}
+
+#header .title a {
+    height: 36px;
+    width: 90px;
+    color: #434343;
+    display: block;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+#header .title a:hover {
+    color: #93C47D;
+}
+
+/*==============================================*/
+/*广告*/
+#ad {
+    background: url("../image/banner01.jpg") no-repeat center;
+    height: 453px;
+}
+
+/*==============================================*/
+/*动态*/
+#Dynamics .wrapper {
+    height: 152px;
+    margin-top: 10px;
+
+}
+
+#Dynamics #log {
+    height: 152px;
+    width: 660px;
+    float: left;
+}
+
+#Dynamics .D1 {
+    width: 640px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+#Dynamics .D2 {
+    width: 400px;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+#Dynamics .D1 h4, #Dynamics .D2 h4 {
+    float: left;
+    margin-top: 6px;
+}
+
+#Dynamics .more {
+    width: 100px;
+    height: 30px;
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+    color: #000;
+}
+
+#Dynamics .list1 .l1, #Dynamics .list2 .l2 {
+    background: url(../image/home-bg1.png) no-repeat left center
+}
+
+#Dynamics .list1 .l1 {
+    float: left;
+    padding-left: 15px;
+    margin-left: 10px;
+    width: 295px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#Dynamics .list1 .l1 a {
+    height: 14px;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+}
+
+#Dynamics #notice {
+    width: 400px;
+    height: 152px;
+    float: left;
+}
+
+#Dynamics .list2 {
+    width: 380px;
+    height: 90px;
+    border: #333 1px dotted;
+}
+
+#Dynamics .list2 .l2 {
+    width: 360px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+}
+
+#Dynamics .list2 .l2 a {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+}
+
+/*====================================================*/
+/*推荐*/
+#Popular {
+    height: 450px;
+    background-color: #F5F5F5;
+}
+
+#Popular h2 {
+    padding-top: 40px;
+    padding-bottom: 15px;
+    color: #666666;
+    text-align: center;
+}
+
+#Popular h3 {
+    padding-bottom: 35px;
+    color: #666666;
+    text-align: center;
+}
+
+#Popular .PC {
+    height: 209px;
+    margin-bottom: 30px;
+    display: block;
+}
+
+#Popular .course {
+    width: 194px;
+    height: 209px;
+    padding-right: 15px;
+    float: left;
+}
+
+#Popular .course h3 {
+    font-size: 17px;
+    text-color: #000;
+    text-align: center;
+    height: 22px;
+    line-height: 22px;
+}
+
+#Popular .bg1, .bg2, .bg3, .bg4, .bg5 {
+    background-repeat: no-repeat;
+}
+
+#Popular .more {
+    display: block;
+    float: right;
+    line-height: 30px;
+    width: 100%;
+    height: 30px;
+    padding-top: 20px;
+    text-align: center;
+
+}
+
+#Popular .more a {
+    color: #333333;
+}
+
+#Popular .more a:hover {
+    color: #fff;
+}
+
+/*====================================================*/
+/*宣传*/
+#Introduce {
+    height: 324px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #93C47D;
+}
+
+#Introduce .wrapper2 {
+    height: 324px;
+    padding-top: 10px;
+}
+
+#Introduce .float {
+    width: 100%;
+    height: 35px;
+    padding-left: 162px;
+    float: left;
+}
+
+#Introduce #left, #right {
+    display: block;
+    width: 100px;
+    height: 35px;
+    float: left;
+}
+
+#Introduce #left {
+    color: #333;
+    background-color: #F5F5F5;
+    line-height: 35px;
+    text-align: center;
+}
+
+#Introduce #right {
+    color: #333;
+    background-color: #FEE157;
+    line-height: 35px;
+    text-align: center;
+}
+
+#Introduce h1, h3, h6 {
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+#Introduce h1 {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 35px;
+    height: 73px;
+    line-height: 73px;
+}
+
+#Introduce h3 {
+    font-size: 22px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px #fff solid;
+    height: 55px;
+    line-height: 55px;
+}
+
+#Introduce h6 {
+    text-align: left;
+    font-size: 13px;
+    height: 90px;
+    line-height: 30px;
+}
+
+#Introduce .more {
+    display: block;
+    /*float: right;*/
+    line-height: 20px;
+    width: 100%;
+    height: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#Introduce .more a {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+}
+
+#Introduce .more a:hover {
+    background-color: #fff;
+    border: 1px solid #333;
+    color: #333;
+}
+
+/*======================================================*/
+/*问题&报名*/
+#sign {
+    background-color: #FEE157;
+    height: 370px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#sign .wrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 360px;
+}
+#sign .float_layer{
+    /*float: left;*/
+}
+
+/*左面-常见问题*/
+#sign #problem {
+    width: 675px;
+    height: 270px;
+    float: left;
+    /*margin: 0;*/
+}
+
+#sign #problem .D3 {
+    /*display: block;*/
+    width: 580px;
+    height: 35px;
+    margin-bottom: 10px;
+    /*float: left;*/
+}
+
+#sign .D1 h4 {
+    float: left;
+    margin-top: 6px;
+}
+
+#sign .more {
+    display:block;
+    width: 100px;
+    height: 30px;
+    float: right;
+    line-height: 30px;
+    font-size: 13px;
+    color: #000;
+}
+
+#sign .list1 {
+    width: 600px;
+    height: 150px;
+    border: #333 1px dotted
+}
+
+#sign .list1 .l1 {
+    background: url(../image/Problem-bg.png) no-repeat left center;
+    padding-left: 15px;
+    margin-left: 10px;
+}
+
+#sign .list1 .l1 a {
+    height: 14px;
+    text-align: center;
+    font-size: 12px;
+    color: #000;
+    line-height: 14px;
+}
+
+#sign .list1 .l1 a:hover {
+    color: #fff;
+}
+
+/*右面-报名联系*/
+#sign .contact {
+    float: left;
+    width: 335px;
+    height: 356px;
+}
+
+#sign .contract h4{
+    width: 335px;
+    height: 32px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    line-height: 32px;
+    text-align: center;
+}
+
+#sign #excel {
+    width: 333px;
+    height: 257px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:1px dotted #666;
+}
+
+#excel form {
+    width: 333px;
+    height: 257px;
+}
+
+
+
+
+/*=========================================================*/
+/*底边栏*/
+#footer {
+    height: 100px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: #414B4A;
+
+}
+
+#footer .menu {
+    width: 100%;
+}
+
+#footer .title {
+
+    height: 18px;
+}
+
+#footer a {
+
+    height: 18px;
+    /*width: 40px;*/
+    color: #F5F5F5;
+    display: block;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+#footer .title a:hover {
+    color: #93C47D;
+}
+
+#footer h4{
+    width: 100%;
+    padding-top: 6px;
+    color:#F5F5F5;
+    text-align: -webkit-center;
+}
+/*========================================================*/
+
+#white {
+    height: 21px;
+    padding: 5px;
+    color: #F5F5F5;
+}
+
+#white h3 {
+    display: inline-block;
+    text-align: -webkit-center;
+    color: #000;
+    /*float: left;*/
+}
+
+#white a{
+    color:#000;
+}
