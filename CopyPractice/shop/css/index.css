@@ -43,7 +43,6 @@ div.float#cart{
 /*主菜单*/
 body{
     height: 600px;
-
 }
 
 #main-header{
@@ -75,13 +74,14 @@ body{
     /*子单左移，并设置不显示*/
     width: 1140px;
     height: 300px;
-    background: #ffffff;
+    background: #434343;
     margin-left: -190px;
     display: none;
 }
 #makeup:hover #sub-menu{
     /*显示子单*/
     display: block;
+    opacity: 0.9;
 }
 
 #clear{
@@ -129,9 +129,15 @@ body{
     width: 1140px;
 }
 
+#product .info-list{
+    height: 1000px;
+}
+
 #product .product-info{
-    border:solid 1px;
-    border-color: #ccc;
+    display: block;
+    margin:10px 1.5%;
+    float: left;
+    border:solid 1px #ccc;
     width: 340px;
 }
 
@@ -186,10 +192,17 @@ body{
     height: 43px;
     position:center;
     border: 0;
-    /*选中阴影*/
-    /*outline: none;*/
+    outline: none;
+    border-radius: 5px;
     margin-top: 5px;
     font-size: 20px;
+    cursor: pointer;
+}
+
+#add:hover{
+    background-color: #fff;
+    border: 1px solid #ef8743;
+    color: #333333;
 }
 
 /*底边栏*/

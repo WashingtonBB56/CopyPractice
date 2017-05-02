@@ -15,7 +15,7 @@
 #login a{
     color: #fff;
 }
-div.float#cart{
+div.float #cart{
     width: 260px;
     height: 30px;
     background: #000 url(../img/cart.png) 230px no-repeat;
@@ -94,110 +94,32 @@ body{
     top: 35px;
     font-size:10px;
 }
-/*===========================================================*/
-/*商品一览*/
-#product .wrapper{
-    width: 1140px;
+/*=======================================*/
+#detail{
+    background-color: #efefef;
 }
 
-#product .main-title{
-    margin-top: 30px;
-    margin-bottom: 15px;
+#detail .wrapper{
+    height: 820px;
 }
 
-#product .logo-table{
-    height: 238px;
-}
-
-#product .logo{
-    display: block;
-    margin-right: 10px;
-    margin-bottom: 10px;
+#detail .left{
     float: left;
+    width: 855px;
 }
 
-#product .info-list{
-    height: 1000px;
-}
-
-#product .product-info{
-    display: block;
-    margin:10px 1.5%;
+#detail .right{
     float: left;
-    border:solid 1px #ccc;
-    width: 340px;
-}
-
-#product .pic{
-    width: 248px;
-    height: 248px;
-    border-right:solid 1px;
-    border-color: #ccc;
-    vertical-align: bottom;
-}
-
-#product .new{
-    float:right;
-    color:#fff;
-    height: 30px;
-    width: 41px;
-    background-color:#fa558f;
-    /*text-align: center;*/
-    /*底部对齐*/
-}
-
-#product .product-detail{
-    width: 340px;
-    height: 192px;
-    background-color: #ffcc88;
-}
-
-#product .detail-bk{
-    width: 320px;
-    height: 180px;
-    position:relative;
-    padding-top:10%;
-    padding-left: 10%;
-}
-
-#product .product-info h3,{
-    text-align: center;
-    color:#fff;
-    margin: 5px;
-}
-
-.product-detail input{
-    width: 150px;
-    height: 20px;
-    text-indent: 10px;
-}
-
-#add{
-    color:#fff;
-    background-color: #ef8743;
-    width: 143px;
-    height: 43px;
-    position:center;
-    border: 0;
-    outline: none;
-    border-radius: 5px;
-    margin-top: 5px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-#add:hover{
-    background-color: #fff;
-    border: 1px solid #ef8743;
-    color: #333333;
+    width: 286px;
+    height: 380px;
+    padding-top: 80px;
+    margin-left: 15px;
+    margin-right: 15px;
+    left-border:1px;
 }
 
 
-
-
-
-
-/*====================================================*/
+/*============================================*/
 #footer{
     background: #fa558f;
     height: 83px;
