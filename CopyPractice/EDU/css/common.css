@@ -24,3 +24,107 @@ li{
     height: 100%;
     margin: 0 auto;
 }
+
+#header {
+    height: 76px;
+    border-bottom: solid #93C47D 2px;
+}
+
+#header .menu {
+    float: left;
+}
+
+#header .page {
+    margin-left: 250px;
+    margin-top: 11px;
+}
+
+#header #logo {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 11px;
+}
+
+#header .title {
+    float: left;
+    padding-top: 15px;
+    text-align: center;
+}
+
+#header .title a {
+    height: 36px;
+    width: 90px;
+    color: #434343;
+    display: block;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+#header .title a:hover {
+    color: #93C47D;
+}
+
+/*==============================================*/
+/*¹ã¸æ*/
+#ad {
+    background: url("../image/banner01.jpg") no-repeat center;
+    height: 453px;
+}
+
+/*==============================================*/
+/*µ×±ßÀ¸*/
+#black{
+    height: 100px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    background-color: #414B4A;
+}
+
+#black.top{
+    height: 100px;
+}
+
+#black .title {
+    height: 18px;
+    float: left;
+    margin:0 23px 10px 23px;
+    color: #F5F5F5;
+}
+
+#black .title ~h4{
+    font-size: 18px;
+    color: #F5F5F5;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+#black .title:hover {
+    color: #93C47D;
+}
+
+#black .top .NO,#black .top .date{
+    color:#F5F5F5;
+    text-align:center;
+    line-height: 36px;
+    height: 36px;
+}
+/*========================================================*/
+
+#footer{
+    margin-top: 5px;
+    height: 21px;
+    padding: 5px;
+    background-color: #fff;
+    color: #000;
+}
+
+#footer #f-h3 {
+    text-align: center;
+    line-height: 18px;
+    height: 18px;
+    color: #000;
+}
+
+#footer #f-h3 a[href="git.com"] {
+    color: #000;
+}

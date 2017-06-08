@@ -1,51 +1,5 @@
-#header {
-    height: 76px;
-    border-bottom: solid #93C47D 2px;
-}
 
-#header .menu {
-    float: left;
-}
-
-#header .page {
-    margin-left: 250px;
-    margin-top: 11px;
-}
-
-#header #logo {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    margin-top: 11px;
-}
-
-#header .title {
-    float: left;
-    padding-top: 15px;
-    text-align: center;
-}
-
-#header .title a {
-    height: 36px;
-    width: 90px;
-    color: #434343;
-    display: block;
-    line-height: 36px;
-    font-weight: bold;
-}
-
-#header .title a:hover {
-    color: #93C47D;
-}
-
-/*==============================================*/
-/*¹ã¸æ*/
-#ad {
-    background: url("../image/banner01.jpg") no-repeat center;
-    height: 453px;
-}
-
-/*==============================================*/
-/*¶¯Ì¬*/
+/*ï¿½ï¿½Ì¬*/
 #Dynamics .wrapper {
     height: 152px;
     margin-top: 10px;
@@ -131,7 +85,7 @@
 }
 
 /*====================================================*/
-/*ÍÆ¼ö*/
+/*ï¿½Æ¼ï¿½*/
 #Popular {
     height: 450px;
     background-color: #F5F5F5;
@@ -195,7 +149,7 @@
 }
 
 /*====================================================*/
-/*Ðû´«*/
+/*ï¿½ï¿½ï¿½ï¿½*/
 #Introduce {
     height: 324px;
     padding-top: 5px;
@@ -237,13 +191,13 @@
     text-align: center;
 }
 
-#Introduce h1, h3, h6 {
+#Introduce .intr {
     color: #fff;
     text-align: center;
     display: block;
 }
 
-#Introduce h1 {
+#Introduce .in1 {
     padding: 0 10px;
     font-weight: bold;
     font-size: 35px;
@@ -251,7 +205,7 @@
     line-height: 73px;
 }
 
-#Introduce h3 {
+#Introduce .in3 {
     font-size: 22px;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -260,7 +214,7 @@
     line-height: 55px;
 }
 
-#Introduce h6 {
+#Introduce .in6 {
     text-align: left;
     font-size: 13px;
     height: 90px;
@@ -277,7 +231,7 @@
     text-align: center;
 }
 
-#Introduce .more a {
+#Introduce .more>a {
     display: inline-block;
     border: 1px solid #fff;
     border-radius: 5px;
@@ -294,7 +248,7 @@
 }
 
 /*======================================================*/
-/*ÎÊÌâ&±¨Ãû*/
+/*ï¿½ï¿½ï¿½ï¿½&ï¿½ï¿½ï¿½ï¿½*/
 #sign {
     background-color: #FEE157;
     height: 370px;
@@ -308,26 +262,24 @@
     height: 360px;
 }
 #sign .float_layer{
-    /*float: left;*/
+    height: 360px;
+    padding:5px 0;
 }
 
-/*×óÃæ-³£¼ûÎÊÌâ*/
+/*ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 #sign #problem {
     width: 675px;
     height: 270px;
     float: left;
-    /*margin: 0;*/
 }
 
 #sign #problem .D3 {
-    /*display: block;*/
     width: 580px;
     height: 35px;
     margin-bottom: 10px;
-    /*float: left;*/
 }
 
-#sign .D1 h4 {
+#sign .D3>h4 {
     float: left;
     margin-top: 6px;
 }
@@ -345,44 +297,48 @@
 #sign .list1 {
     width: 600px;
     height: 150px;
-    border: #333 1px dotted
+    border: #333 1px dotted;
+    padding: 20px;
 }
 
 #sign .list1 .l1 {
     background: url(../image/Problem-bg.png) no-repeat left center;
     padding-left: 15px;
     margin-left: 10px;
+    padding-button: 2px;
+    border-bottom: 1px dotted #333333;
 }
 
-#sign .list1 .l1 a {
-    height: 14px;
+#sign .list1 .l1>a {
+    height: 16px;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     color: #000;
-    line-height: 14px;
+    line-height: 16px;
 }
 
 #sign .list1 .l1 a:hover {
     color: #fff;
 }
-
-/*ÓÒÃæ-±¨ÃûÁªÏµ*/
+/*===================================*/
+/*ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµ*/
 #sign .contact {
     float: left;
     width: 335px;
     height: 356px;
 }
 
-#sign .contract h4{
+#sign .contract +h4{
     width: 335px;
     height: 32px;
     padding-top: 10px;
     padding-bottom: 15px;
     line-height: 32px;
-    text-align: center;
 }
 
 #sign #excel {
+    text-align: center;
+    float: left;
     width: 333px;
     height: 257px;
     padding-top: 20px;
@@ -390,68 +346,50 @@
     border:1px dotted #666;
 }
 
-#excel form {
-    width: 333px;
-    height: 257px;
+#excel .c-top{
+    margin-bottom: 5px;
 }
 
-
-
-
-/*=========================================================*/
-/*µ×±ßÀ¸*/
-#footer {
-    height: 100px;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    background-color: #414B4A;
-
-}
-
-#footer .menu {
-    width: 100%;
-}
-
-#footer .title {
-
-    height: 18px;
-}
-
-#footer a {
-
-    height: 18px;
-    /*width: 40px;*/
-    color: #F5F5F5;
+#excel .contract .c-l{
     display: block;
-    line-height: 36px;
-    font-weight: bold;
+    width: 260px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    color: #333333;
 }
 
-#footer .title a:hover {
-    color: #93C47D;
+#excel .c-down{
+    width: 350px;
+    height: 28px;
+    text-indent: 5px;
+    margin-bottom: 5px;
 }
 
-#footer h4{
-    width: 100%;
-    padding-top: 6px;
-    color:#F5F5F5;
-    text-align: -webkit-center;
-}
-/*========================================================*/
-
-#white {
-    height: 21px;
-    padding: 5px;
-    color: #F5F5F5;
+#excel .in-border{
+    display: block;
+    margin: 0 30px;
+    width: 260px;
+    height: 28px;
+    outline: none;
+    text-indent: 5px;
+    overflow: hidden;
+    border: #ccc 1px dotted;
 }
 
-#white h3 {
-    display: inline-block;
-    text-align: -webkit-center;
-    color: #000;
-    /*float: left;*/
+#excel .s-button{
+    width: 100px;
+    height: 25px;
+    outline: none;
+    outline: none;
+    background-color: #3c3b3b;
+    color: #fff;
+    border: 1px solid #3c3b3b;
 }
 
-#white a{
-    color:#000;
+#excel .s-button:hover{
+    background-color: #fff;
+    color: #3c3b3b;
+
 }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        li{
+            list-style: none;
+        }
+
+        #container{
+            width: 716px;
+            height: 470px;
+            background:#272727;
+            border:1px solid #272727;
+        }
+
+        #container h3{
+            color:#fff;
+            background: #E0C567;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px solid #272727;
+        }
+
+        #nav{
+            height: 28px;
+            border-bottom: 1px solid #272727;
+        }
+
+        #nav li{
+            width: 357px;
+            height: 28px;
+            float: left;
+            background: #E0C567;
+            text-align: center;
+            line-height: 28px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+        }
+        #nav li:hover{
+            background: #2B1818;
+        }
+
+        #nav .select{
+            background: #2B1818;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        #content div{
+            display: none;
+            width: 711px;
+            height: 399px;
+        }
+
+        #content .select{
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h3>你们是我在3-4唯一想要的船[颓].jpg</h3>
+        <ul id="nav">
+            <li class="select">重樱·赤城</li>
+            <li>重樱·加贺</li>
+        </ul>
+
+        <div id="content">
+            <div class="select" ><img src="img/赤城.jpg"></div>
+            <div><img src="img/加贺.jpg"></div>
+        </div>
+    </div>
+
+<script>
+    var oNav=document.getElementById("nav");
+    var aLi=oNav.getElementsByTagName("li");
+
+    var oContent=document.getElementById("content");
+    var aDiv=oContent.getElementsByTagName("div");
+    //==========================================
+    for(var i=0;i<aLi.length;i++){
+        aLi[i].index = i;
+        aLi[i].onclick=function(){
+            for(var j=0;j<aLi.length;j++){
+                aLi[j].className="";
+                aDiv[j].className="";
+            }
+            this.className="select";
+            aDiv[this.index].className = "select";
+        };//选中当前标签，所有类设置为空，然后将当前选定类设置为“选择”
+    }
+    //===========================================
+</script>
+
+</body>
+</html>

@@ -42,6 +42,7 @@ div.float#cart{
 /*主菜单*/
 body{
     height: 600px;
+
 }
 
 #main-header{
@@ -92,133 +93,97 @@ body{
     left: 200px;
     top: 35px;
     font-size:10px;
-
 }
-
-/*=========================================================*/
-#product.wrapper{
+/*============================================*/
+#rg-detail .wrapper{
+    height: 650px;
     margin-top: 20px;
-    height: 1000px;
 }
 
-#product .float-area{
-    height: 1040px;
+#rg-detail #rg-title{
+    padding: 10px 0;
+    color: #3c3b3b;
+    margin-top: 20px;
 }
 
-#product #main-titile{
-    margin-top: 30px;
-    margin-bottom: 15px;
+#rg-detail a[href="login.html"]{
+    color: #999999;
 }
 
-#product #left{
+#rg-detail .left{
     float: left;
-    margin-right: 20px;
+    width: 580px;
 }
 
-#product .dark{
-    display: block;
-    background-color: #464646;
-    color: #fff;
-    height: 15px;
-    line-height: 15px;
-    padding: 10px;
-    margin-bottom: 19px;
+#rg-detail .rg-form{
+    height: 86px;
 }
 
-#product .tag{
-}
-
-#product .gray{
-    display: block;
-    padding: 5px 10px;
-    height: 32px;
-    width: 240px;
-    color: #333333;
-    background-color:#F5F5F5 ;
-    line-height: 32px;
-    margin-bottom: 10px;
-
-}
-
-#product .arrow{
-    display: block;
-    float: right;
-    margin-top:13px;
-}
-
-#product #category{
-    width: 240px;
-}
-
-/*右侧列表*/
-#product .info-list{
-    height: 1000px;
-}
-
-#product .product-info{
-    display: block;
-    margin:10px 5px;
-    float: left;
-    border:solid 1px #ccc;
-    width: 248px;
-}
-
-#product .product-info img{
-    width: 248px;
-    height: 248px;
-    border-right:solid 1px;
-    border-color: #ccc;
-    vertical-align: bottom;
-}
-
-#product .product-detail{
-    width: 248px;
-    height: 192px;
-    background-color: #ffcc88;
-}
-
-#product .detail-bk{
-    width: 240px;
-    height: 180px;
-    position:relative;
-    padding-top:10%;
-    padding-left: 10%;
-}
-
-#product .product-info h3{
-    /*text-align: center;*/
-    color:#fff;
-}
-
-.product-detail input{
-    margin: 8px 0;
-    width: 130px;
+#rg-detail input{
     height: 20px;
-    text-indent: 10px;
-}
-
-#add{
-    color:#fff;
-    background-color: #ef8743;
-    width: 120px;
-    height: 43px;
-    position:center;
-    border: 0;
+    width: 380px;
+    padding: 8px;
     outline: none;
+    margin: 7px 0;
+}
+
+#rg-detail #reg{
+    width: 426px;
+    /*height: 23px;*/
+    padding: 8px;
+    border: solid  1px #ef8743;
     border-radius: 5px;
-    margin-top: 10px;
-    font-size: 14px;
-    cursor: pointer;
+    color:#F5F5F5;
+    background-color: #ef8743;
+    line-height: 23px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 16px;
 }
 
-#add:hover{
-    background-color: #fff;
-    border: 1px solid #ef8743;
-    color: #333333;
+#rg-detail #reg:hover{
+    border: solid  1px #000 ;
+    color:#000000;
+    background-color: #Fff;
+    /*text-size:20px;*/
 }
 
-/*==================================================*/
-/*页脚*/
+
+#rg-detail .right{
+    float: left;
+
+}
+
+#rg-detail h3{
+    color: #ef8743;
+    width:528px;
+}
+
+#rg-detail h4{
+    width: 528px;
+}
+
+#rg-detail #sub{
+    width: 426px;
+    /*height: 23px;*/
+    padding: 8px;
+    border: solid  1px #ef8743;
+    border-radius: 5px;
+    color:#F5F5F5;
+    background-color: #ef8743;
+    line-height: 23px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 16px;
+}
+
+#rg-detail #sub:hover{
+    border: solid  1px #000 ;
+    color:#000000;
+    background-color: #Fff;
+    /*text-size:20px;*/
+}
+/*============================================*/
 #footer{
     background: #fa558f;
     height: 83px;
