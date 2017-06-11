@@ -1,3 +1,14 @@
+兼容性问题:
+盒模型 margin/padding
+子代选择器 不兼容低版本
+透明度
+<a><img> ：低版本有蓝色边框
+<style>:document.get
+<style>:xxx=function(e)
+
+
+
+
 2017-4-8
 1.前端
 html 网页内容
@@ -110,7 +121,6 @@ left/right
 meta name="description"描述"keyword"搜索关键字
 ctrl+d 快捷复制本行
 桌面取色工具
-退格tab
 text-align: center; 文字居中
 cursor: pointer; 鼠标变成可选中
 
@@ -168,7 +178,7 @@ position：fixed 固定定位 相对于浏览器 不支持低版本ie
 static 默认定位
 
 2.块元素在块元素内居中：父元素相对子元素，子元素绝对
-定位t50%m50%，mt/ml:-h*0.5.
+定位t50%l50%，mt/ml:-h*0.5.
 
 3.<input type=text“”>输入框
 text-indent：x px 文本缩进 属性<button>行级元素
@@ -181,7 +191,6 @@ text-indent：x px 文本缩进 属性<button>行级元素
 6.css精灵
 
 2017-4-22
-http://news-true.net/zozasm
 $ ssh-keygen -t rsa -C "kirigirisayaka@gmail.com"
 E:\Git\usr\bin\ssh-keygen.exe
 git config --global
@@ -227,7 +236,7 @@ number 数量
 4.css3 伪元素选择器 #p:first-letter /first-line
 5.自适应问题：浮动顺序
 
-2017-5-7-JS啦
+2017-5-7-JS啦,js单线程，浏览器多线程
 0.不区分""和''
 1.<script>---</body>
 2.弱类型语言  统一 var
@@ -330,11 +339,11 @@ document.oncontextmenu()
 3.1嵌套选择缩小范围： 先选ID/CLASS再选TAG
 var x=document.getElementById("id")
 var y=x.getElementByTagName("tag")
-4，自定义右键菜单
+4.自定义右键菜单
 <ul><li></li></ul>
 4.1事件绑定
-阻止浏览器默认行为
-document.oncontextmenu=function(e){ return false;}//e自带的对象，兼容性问题
+阻止浏览器默认行为:{ return false;}
+document.oncontextmenu=function(e){}//e自带的对象，兼容性问题
 onContextMenu方法支持，onContextMenu元素只有火狐支持(?)
 兼容性问题解决：e=e||window.event;
 4.2右键定位
@@ -359,23 +368,52 @@ for(var i=0;i<aLi.length;i++){
     if(){}else{} xx=！xx;
 
 第三种：next
-}
+
 
 5.定时器
-setInterval(function()){}，时间）
-clearInterval();
-
-set/clearTimeout(function()){}，时间); //超时、延迟：只执行一次
+var timer=set/clearInterval(function()){}，时间）;//timer返回值是number
+var timer=set/clearTimeout(function()){}，时间); //超时、延迟：只执行一次
 
 2017-6-1
 1.script写在最后：代码顺序执行,dom加载结束后执行
- <head>标签里的script要在整个资源加载完成后执行
-2.
+ <head>标签里的<script>要在整个资源加载完成后执行,添加.onload事件
 
+2017-6-10
+0.tag1#id.class>tag2{$}*number
+1.offsetWidth/Height ：获取图片宽度高度
+2.inherit from 继承
+3.<style>-visibility:hidden; 与透明度(opacity)不同，结构在，绑定事件无法触发
+4.默认事件举例：浏览器跳转，双击选中，默认右键菜单
+5.获取事件源eg：var target=e.target||window.event.srcElement;//兼容性问题
+兼容性问题解决：
+xxx=function(e){e.xx=xxx;};
+function getTarget(e){
+    if {e.target} else {window.event.srcElement}
+}
+或者line339：e=e||w.e;
+6.事件冒泡：事件可以传播，子元素属性可以传播到父元素
+7.<img src className>    <style> img.className{}
+8.setTimeout(function()){}，0);跳出当前任务节点，等其他语句执行完在执行
+eg:sT(f(){console(1)},0); console(2);console(3);   //输出顺序：2,3,1
+9.xxx.onselectstart=f() return F;去除选中状态
 
-
-
-
+201节点7-6-11
+1.dom节点：element.firstChild //第一个，兼容性问题
+element.nextSibling//兼
+element.lastChild
+elementpreviousSibling//兼
+element.nodeType
+function next(elem){  //找到该元素的兄弟
+    do{
+        elem = elem.nextSibling;
+    }while(elem && elem.nodeType != 1);
+    return elem;
+}
+function first(elem){ //找到元素的第一个孩子
+    elem=elem.firstChild;
+    return elem.nodeType==1 ?elem :next(elem);
+}
+2.困死了  (?｀Д??)
 
 
 
