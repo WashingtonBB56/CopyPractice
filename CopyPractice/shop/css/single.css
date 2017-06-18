@@ -108,6 +108,36 @@ body{
     width: 494px;
     height: 557px;
     float: left;
+    position:relative;
+}
+
+#arrow #left,#right {
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    border: solid #272727 1px;
+    color: #fff;
+    top: 200px;
+    background:#464646;
+}
+
+#arrow #left:hover,#right:hover{
+    background:#bbb;
+    opacity: 1;
+}
+
+#left{
+    float: left;
+    left:10px;
+}
+
+#right{
+    float: right;
+    right:10px;
 }
 
 #detail .left .large-pic{
@@ -119,20 +149,39 @@ body{
     border: 1px #888 solid;
 }
 
+
 #detail .others{
     width: 494px;
-    height: 133px;
+    height: 135px;
     overflow: hidden;
     margin-top: 10px;
 }
 
-#detail .other-pic>img{
+/*#detail .other-pic>img{*/
+    /*width: 150px;*/
+    /*height: 125px;*/
+    /*padding: 3px;*/
+    /*border: 1px solid #888;*/
+    /*margin: 0 3px;*/
+    /*float: left;*/
+/*}*/
+
+/*#detail .other-pic>img.select{*/
+    /*border: #272727 2px solid;*/
+/*}*/
+
+#detail .others>img{
     width: 150px;
     height: 125px;
     padding: 3px;
     border: 1px solid #888;
     margin: 0 3px;
     float: left;
+    cursor: pointer;
+}
+
+#detail .others>img.select{
+    border: #272727 2px solid;
 }
 
 #detail .right{
@@ -164,6 +213,14 @@ body{
     display: block;
 }
 
+#detail .in-put{
+    height: 30px;
+    width: 50px;
+    font-size: 20px;
+    line-height: 30px;
+
+}
+
 #detail #add-cart:hover{
     background-color: #fff;
     color: #3c3b3b;
@@ -174,18 +231,20 @@ body{
     padding: 10px 0 15px 0;
     border-top: 1px solid #ef8743;
     border-bottom: 1px solid #ef8743;
-    color: #ef8743;
     margin-bottom: 10px;
 }
 
 #detail .tt{
     margin-top: 16px;
     display: inline-block;
+    color: #ef8743;
+    font-size: 15px;
 }
 
 #detail .des-intr{
     color: #464646;
     margin-top: 10px;
+    font-size: 12px;
 }
 #detail #d-h3{
     background-color: #efefef;

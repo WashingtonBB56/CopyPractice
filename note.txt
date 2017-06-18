@@ -391,13 +391,13 @@ function getTarget(e){
     if {e.target} else {window.event.srcElement}
 }
 或者line339：e=e||w.e;
-6.事件冒泡：事件可以传播，子元素属性可以传播到父元素
+6*.事件冒泡：事件可以传播，子元素属性可以传播到父元素，不传兄弟关系
 7.<img src className>    <style> img.className{}
 8.setTimeout(function()){}，0);跳出当前任务节点，等其他语句执行完在执行
 eg:sT(f(){console(1)},0); console(2);console(3);   //输出顺序：2,3,1
-9.xxx.onselectstart=f() return F;去除选中状态
+9.xxx.onselectstart=f() return false;去除选中状态
 
-201节点7-6-11
+2017-6-11
 1.dom节点：element.firstChild //第一个，兼容性问题
 element.nextSibling//兼
 element.lastChild
@@ -413,8 +413,15 @@ function first(elem){ //找到元素的第一个孩子
     elem=elem.firstChild;
     return elem.nodeType==1 ?elem :next(elem);
 }
-2.困死了  (?｀Д??)
 
+2017-6-18
+offset五个：不能赋值，取值无单位
+1.xx.offsetWidth/Height 包含内容高宽+边+内距，不包括外边距
+2.offsetTop/Bottom/Left/Right 相对于最近的已定位的祖先元素 m-t/b/l/r
+3.offsetParent 相对于最近的已定位的祖先元素
 
-
-
+magnifier 放大镜drag 拖拽 preview 预览 scale 放大缩小
+4.放大镜IE8的兼容性问题：
+临床表现就是放大部分嘚瑟几秒（small小图drag放大）：事件触发顺序：s.over,s.out.d.over.s.over
+why：emmmmmmm...一种说法是与drag移动中产生的事件冒泡导致的出现消失有关
+解决方法：① mask遮罩层，所有的事件绑定到mask上++遮罩层必须有颜色，否则低版本还是不显示
