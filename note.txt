@@ -85,12 +85,12 @@ e.子代选择器 -不兼容ie678
 导航-列表
 图片跳转
 默认寻找index页*
-/*权重相同可以被覆盖*/
-/*背景默认左上角开始并平铺整个父元素*/
-/*bakckground-repeat:no-repeat;repeat-x;repeat-y;*/
-/*background-position:上下左右起始/顺时针边距 px*/
-/*
-*{
+  /*权重相同可以被覆盖*/
+  /*背景默认左上角开始并平铺整个父元素*/
+  /*bakckground-repeat:no-repeat;repeat-x;repeat-y;*/
+  /*background-position:上下左右起始/顺时针边距 px*/
+  /*
+  *{
     padding:0;
     margin:0;}
 a{
@@ -420,8 +420,72 @@ offset五个：不能赋值，取值无单位
 2.offsetTop/Bottom/Left/Right 相对于最近的已定位的祖先元素 m-t/b/l/r
 3.offsetParent 相对于最近的已定位的祖先元素
 
-magnifier 放大镜drag 拖拽 preview 预览 scale 放大缩小
+magnifier 放大镜drag 拖拽 preview 预览 scale 放大缩小 selection
 4.放大镜IE8的兼容性问题：
-临床表现就是放大部分嘚瑟几秒（small小图drag放大）：事件触发顺序：s.over,s.out.d.over.s.over
+临床表现就是放大部分嘚瑟几秒（small小图drag放大）：事件触发顺序：small.over,small.out.drag.over.small.over
 why：emmmmmmm...一种说法是与drag移动中产生的事件冒泡导致的出现消失有关
 解决方法：① mask遮罩层，所有的事件绑定到mask上++遮罩层必须有颜色，否则低版本还是不显示
+
+2017-6-24
+1.e||window.event
+    e.e.pageY/X 距离浏览器高/宽
+2****.事件冒泡
+onload/onfocus/onblur/... 没有冒泡属性
+2.0  div#3>div#2>div#1 oD1-oD2-oD3
+2.1事件绑定add：
+   xx.addEventListener("动作",function(),boolean) 按绑定顺序执行，可以绑定多个事件，*兼容性问题
+2.2 add第三个布尔属性
+    false进行事件冒泡，从内部向外部
+    true 事件捕获 从外部向事件源
+    发生顺序：先捕获后冒泡
+2.3 阻止事件冒泡 e.stopPropagation();//阻止传播
+2.4 xx.attachEvent(){"type",function()};
+    只支持早期ie，且ie只能冒泡不能捕获,执行顺序和绑定顺序相反
+    attach默认指向window，而非xx
+    早期ie阻止冒泡方法：window.event.cancelBubble 返回一个布尔值
+2.5 多浏览器兼容方法，封装函数，判断支持哪一种组织方法
+2.6 事件代理、事件委托：有多并列事件分别绑定，比for循环更优秀的办法——利用事件冒泡把子元素事件委托给父元素绑定
+    ul>li{$}*10
+    ul.onclick--定义var--获取事件源target.type/action(2016-6-10)
+2.6.1 加dom节点 ：不能使用push
+var oLi=document.creatElement("li");
+oLi.innerHTML=Math.random();
+oNav.appendChild(oLi);
+2.6.2 方法比上面的更高效
+var sLi="<li>"+Math.random()+"</li>";
+sLi.innerHTML += sLi;
+2.6.3 追加的事件绑定添加事件冒泡
+
+3.ul>li
+    默认：ul高度设置为零，li不隐藏可以看见
+    改动：ul外包div设置高为0；ul溢出隐藏
+4.点击事件：隐藏2(隐藏1 display=none只是视觉上隐藏)
+    删除节点 node.removeChild(node);
+    课上例子：{parent.removeChild(nodeChild[])}
+            节点由大到小可以删除，由小到大由于索引[数组下标]不匹配(看着像是没及时刷新？)导致数组越界报错
+    改动：1.每次跳出当前循环，下次点击再次调用
+         2.当前循环点击时间后再套嵌for循环更新[this.index]
+         3.设置空节点占坑
+
+5.无缝滚动 拉长队头队尾，溢出隐藏；每次每个头结点溢出后扔到队尾(不推荐频繁调用dom的方法)
+6.li的小图
+background: url() no-repeat left center;
+li-style-image：url();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
