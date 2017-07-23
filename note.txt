@@ -29,6 +29,7 @@ git红绿-add
 2017-4-9
 矩形元素[框]的概念*
 快捷whmpf值+Tab
+格式化 ctrl alt L
 1.乱码 <meta>utf-8
 2.Tab快捷键自动补全
 3.dtd：document type definition
@@ -472,20 +473,218 @@ sLi.innerHTML += sLi;
 background: url() no-repeat left center;
 li-style-image：url();
 
+========？？？？？？？？？========
 
+========？？？？？？？
 
+2017-7-13
+1.$(function(){})-节点形式-=>
+$(document).ready(function(){})
+1.2.绑定事件 不覆盖
+2.0.oId.function=>$('#id').on(action,function())
+2.1 substr(start,length);
+substring(start,stop);
+2.2 function $(selector){ return d.gE('selector.substr()');
+ }
+$('#')/$(oId)
+2.3 JQ对象>原生
+2.4 <ID><CLASS></I></C>
+var $I1= $ID
+jq('#ID.C')性能劣于jq('.C',$I1)
+2.5 原生的响应速度快于JQ
+2.6 this.innerHTML 
+$(this).html()
+2.7 基础选择 :even偶数 :odd计数
+:not(selector)过滤 
+2.8 内容选择器 :contains()
+jq(selector).val()=>oI.XX.value
+输入变量 $().val() =><input value="">
+2.9 <ul><li>6
+:eq() +从零开始，-1倒数第一个
+:nth-child() 从一开始，支持公式
+:nth-of-type() 同上，额外检查类型
+2.10 :eq(), :lt(<), :gt(>), :even, :odd
+2.11 jQuery 1.8之前，:eq(index)不接受负值所引值
+2.12 :first伪类选择器相当于:eq(0)。它也可以写为:lt(1)
+2.13 :header <h1>-<h6>
+2.14 $( "<b></b>" ).html( $( ":root" )[0].nodeName ).appendTo( "#log" ); 寻找并加粗显示#log的根元素签名(就是html) <b> 加粗标签
+2.15 :selected 选择器只为适用于为<option>元素
+3 属性
+3.1 attribute type="" id="" dom属性，dom结构中可直观看见
+property 带.属性,对象
+3.2attr/prop('属性','值')
+3.3 removeAttr/Prop 移出
+3.4* selected,disabled,checked 用prop
+3.5 反选：取反
+$('[name=items]').each(f){
+this.checked =!this.checked;
+//$(this).prop('checked',!$(this
+).prop('checked'))}
+3.6* checked特性（attribute）值不会因为复选框的状态而改变，而checked属性（property）会因为复选框的状态而改变。因此，跨浏览器兼容的方法来确定一个复选框是否被选中，是使用该属性（property）：
+3.7 elem.checked	true (Boolean) 将随着复选框状态的改变而改变
+$(elem).prop("checked")	true (Boolean) 将随着复选框状态的改变而改变
+elem.getAttribute("checked")	"checked" (String) 复选框的初始状态;不会改变
+$(elem).attr("checked") (1.6.1+)	"checked" (String) 将随着复选框状态的改变而改变
+3.8 x.css({,,,})
+3.10 Navigator 对象描述
+Navigator 对象包含的属性描述了正在使用的浏览器。可以使用这些属性进行平台专用的配置。
+3.11 indexOf??
+3.12 能力检测 
+elem.currentStyle IE ，chrome不支持(?)
+getComputedStyle(name,boolean).attr chrome滋瓷这个
+3.9 .toggleClass(className) 
+一个或多个样式类,取决于这个样式类是否存在或值切换属性。是类，不是样式
+.toggleClass( function(index, class, switch) [, switch ] )
 
+2017-7-15
+1.font-size:"20px"=> jq:fontSize:"20px";
+2.innerW/H 包括padding
+outerW/H 包括padding border 若有true：+margin
+W/H 纯内容
+3.回到顶部 -定时器
+var 原生方法滚动条=document.body.scrollTop||document.documentElement.sT//兼容性问题
+4.append appendTo prepend prependTo
 
+2017-7-17
+1 .add()   $().add().method();扩大选中结果集
+2 .children()亲子代选择 .find()后代选择
+2.1 .siblings() 兄弟
+3 .closest() 父代 .parents() 先代,起始于父代
+4 .mouseover/out支持冒泡 .mouseenter/leave不支持冒泡
+5 .hover(function(){mouseenter()},function(){mouseleave()})
+6 $(obj1).on("action","obj2",function);
+7 动画
+7.1 显示.show隐藏.hide切换.toggle
+7.2 .animate({style},time,effect,fun(){});
+    :animated选择器选中正在执行动画效果的元素
+7.3 .fadeIn/Out/Toggle() 淡入淡出
+7.4 .slideUp/Down() 上入上出
+8 dom结构加载html $(obj).load("src");
+9 $().next().stop(clear取消当前,jump:true执行完本次跳出false直接跳出).effect();
+10 trigger 重复鼠标点击动作
+11 鼠标事件.toggle()在1.9已经移除，动画效果.toggle()控制显示消失
 
+2017-7-18
+1 Option 对象代表 HTML 表单中下拉列表中的一个选项
+2 this/e.target/e.currentTarget的区别
+<ul><li></li></ul>
+li绑定事件里this和target的指向为同一个(e,target===this)=true
+ul绑定时间里，this仍旧指向ul，e是li,cur跟this相同都是ul
+2.1 event.currentTarget这个属性总是等于函数的this
+event.target属性可以是注册事件时的元素，或者它的子元素。通常用于比较 event.target 和 this 来确定事件是不是由于冒泡而触发的。经常用于事件冒泡时处理事件委托
+3 下拉菜单例子里双击事件会出现事件冒泡导致双击后出发两个事件，所以要进行事件绑定，事件全部委托给父元素select1/select2 option,函数内部再指向具选择项$(e.target)
+4 form 表单的button绑定时间每次触发后都会提交表单内容，引发界面刷新
+5 focusein/focuseout支持事件冒泡，非原生focus/flur
+6 filter 筛选元素集合中匹配表达式 或 通过传递函数测试的 那些元素集合
+7 cookie 4kb
+7.1 ;expires 保留天数
+7.2 属性为session，关闭浏览器即清空
+7.3 date.UTCString date转化成字符串
+7.4 删除本地cookie document.cookie=key +("=value;expires="+date.UTCString); jq为-1，原生-1属性为session
+7.5 key,value,expires key的唯一性？网页登陆过的所有账号信息呢？
+8 splite() 分割字符串
+tream() 去掉当前串前后的空格
+9 超链接文字提示
+9.1 <a>l标签只要带titile属性，必然会出现文字提示，自定义样式应该有语句去掉本身的title属性
+举个例子：
+<div id="jnNotice">
+			<div id="jnMiaosha">
+				<a href="#nogo" class="JS_css3"><img src="images/upload/20120216.jpg" alt="冬品清仓"  /></a>
+			</div>
+			<div id="jnNoticeInfo">
+				<h2 title="最新动态">最新动态</h2>
+				<ul>
+					<li><a href="###1" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
+					<li><a href="###2" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
+					<li><a href="###3" class="tooltip" title="[活动] COEY秋冬新品全场2.3折起">[活动] COEY秋冬新品全场2.3折起</a></li>
+					<li><a href="###4" class="tooltip" title="[活动] 伊伴春鞋迎春大促">[活动] 伊伴春鞋迎春大促</a></li>
+					<li><a href="###5" class="tooltip" title="[活动] 千百度冬靴新品火热让利">[活动] 千百度冬靴新品火热让利</a></li>
+					<li><a href="###6" class="tooltip" title="[活动] COEY秋冬新品全场2.3折起">[活动] COEY秋冬新品全场2.3折起</a></li>
+				</ul>
+				<br class="clear" />
+			</div>
+		</div>
 
+$(function(){
+    var x = 10;
+	var y = 20;
+	$("a.tooltip").mouseover(function(e){
+       	this.myTitle = this.title;
+		this.title = "";
+	    var tooltip = "<div id='tooltip'>"+ this.myTitle +"</div>"; //创建 div 元素
+		$("body").append(tooltip);	//把它追加到文档中
+		$("#tooltip").css({
+				"top": (e.pageY+y) + "px",
+				"left": (e.pageX+x)  + "px"
+			}).show("fast");	  //设置x坐标和y坐标，并且显示
+    }).mouseout(function(){
+		this.title = this.myTitle;
+		$("#tooltip").remove();   //移除
+    }).mousemove(function(e){
+		$("#tooltip").css({
+				"top": (e.pageY+y) + "px",
+				"left": (e.pageX+x)  + "px"
+			});
+	});
+});
+9.2 商城用超文本似乎有些鸡肋？文章可以考虑用这个控制内容提示
 
+2017-07-19 CSS3
+1.查询兼容性的网站caniuse.com
+2.浏览器兼容*5:听该有快捷插件，记得找(?)
+    chrome、safari -webkit-
+    firefox -mz-
+    opera -o-
+    ie -ms-
+    默认
+3.选择器 first/last-of-type 选择父项后第一个拥有此类标签的子项
+4 伪元素与伪类区分，标识为::，早期不识别双冒号(兼容性":")
+4.1 ::first-line/letter 第一位置有空格，则选择空格(&nbsp)和首内容
+4.2 ::after/::before {content:""} //dom结构不显示,行级元素
+    可以插入属性，content:attr();
+4.2.1 阻止塌陷
+    <div class="clearfix"></div>
+    .clearfix::after{content:""; display:block;clear both;} // 业界通用clearfix命名
+5 阴影shadow(水平，垂直，模糊度，颜色)；（rgba:0-255，0-255，0-255，0-1)
+6 clip 裁剪，效果同overflow：hidden；
+  ellipsis 省略号
+  文本隐藏溢出（？）：overflow/white-space;nowrap;//不换行
+  word-break:break-all;//强制换行
+7 字体 woff目前新兴格式：
+  @font-face xx声明，引用{font-family:xx;}
+8 hsla 色调，饱和度 亮度 透明度 //程序猿不常用
+9 五环例子：新建五个环，伪元素复制，此时有十个环
+  z-index更改层叠处关系，并调节上下左右部分透明度实现视觉套嵌
+10 box-shadow 盒模型阴影
 
+2017-7-20
+1 {backgroud-clip:text;color:transpate;backgroud:...;}//图片蒙版，文字覆盖样式为图片
+2 background-size设置图片百分比：contain等比例，边界小的，可能有空隙/cover等比例，边界大的
+  可以设置多个背景，逗号分隔，url() 起始x起始y
+3 渐变
+4 混杂盒模型(怪异盒模型)包括内容content，内边距padding，边框border，再去掉html文本首部document声明时出现
+  标准盒模型width为内容
+5 弹性盒模型(伸缩盒模型) css3
+  horizon 水平 vertical 垂直 reverse 反向
+6 overflow：scroll;溢出滚动
+7 变形 transform：①rotate ②translate ③scale ④skew
+7.1 :rotate(deg); //旋转，默认顺时针 transform-origin:x,y;//变形起始于原点
+7.2 :translate(x,y); //位移，tX,tY,默认起始位置左上
+    自适应 top:50%;left:50%;:translate(-50%,-50%);//块级
+7.3 scale(times);//放大缩小,sXsY
+7.4 skew(deg1,deg2);//拉伸变形
+8 过渡 transition(prop,time,effect,delay);//","分割，elem发生变化是触发
+8.1 -property，-duration，-timing-function，-delay
+8.2 常用效果：linear匀速变化，ease平滑，ease-in，ease-out,快慢
+9 动画 animation:name time effect iteration-count;
+  @keyframe{{1}{2}{3}}; //关键帧确定，内部分割，只有两段可以用from{}to{}
+9.1 iteration-count:forward不回溯到初始，infinite循环//重复次数，默认一次，结束时回到初始
 
-
-
-
-
-
-
-
+2017-7-21 css3-3d
+1.perspective:z; //视角距离
+  perspective-origin:(x,y); //视角原点
+  视角加在父元素跟子元素不同，父元素为固定视角（单），能子元素绑定每个子元素视角相同（多）
+2.transform-style:preserve-3d;//能直观看出3D堆叠
+3 元素旋转的时候轴也会转，在旋转位移参数设置相同的情况下，先后顺序不同，最终效果不同
+4 图片预加载，先.onload后添加src，ie6下若前者顺序不同不响应
 
