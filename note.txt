@@ -228,8 +228,7 @@ number 数量
 
 2017-5-6
 1.选项卡小图标：favicon.ico
-  语法格式：<head><link rel="shortcut icon" href:"文
-件名"/>
+  语法格式：<head><link rel="shortcut icon" href:"文件名"/>
   <file>本地协议不兼容部分语法
 2.<input> number,email，date，range范围是h5
   date兼容捉急，js走起
@@ -304,7 +303,7 @@ p代表数组下标对应名
 1.SH+T 退格
 
 2017-5-20
-1.arguments.callee调用本身 - 递归调用
+1. .arguments.callee调用本身 - 递归调用
 2.js函数定义不写函数名只能调用一次
 3.abs(x) 返回数的绝对值。
 ceil(x) 对数进行上舍入。
@@ -667,7 +666,7 @@ $(function(){
 5 弹性盒模型(伸缩盒模型) css3
   horizon 水平 vertical 垂直 reverse 反向
 6 overflow：scroll;溢出滚动
-7 变形 transform：①rotate ②translate ③scale ④skew
+7 变形 transform：①rotate旋转 ②translate位移 ③scale比例 ④skew扭曲
 7.1 :rotate(deg); //旋转，默认顺时针 transform-origin:x,y;//变形起始于原点
 7.2 :translate(x,y); //位移，tX,tY,默认起始位置左上
     自适应 top:50%;left:50%;:translate(-50%,-50%);//块级
@@ -679,6 +678,7 @@ $(function(){
 9 动画 animation:name time effect iteration-count;
   @keyframe{{1}{2}{3}}; //关键帧确定，内部分割，只有两段可以用from{}to{}
 9.1 iteration-count:forward不回溯到初始，infinite循环//重复次数，默认一次，结束时回到初始
+10 animation.css 动画效果集成
 
 2017-7-21 css3-3d
 1.perspective:z; //视角距离
@@ -688,3 +688,105 @@ $(function(){
 3 元素旋转的时候轴也会转，在旋转位移参数设置相同的情况下，先后顺序不同，最终效果不同
 4 图片预加载，先.onload后添加src，ie6下若前者顺序不同不响应
 
+2017-7-24
+1 .sort(function(a,b){return a-b;//升序b-a;//降序})
+
+2017-7-25 html5
+0 语义化：便于人和机器阅读
+1 选项卡小图标：favicon.ico
+  语法格式：<head><link rel="shortcut icon" href:"文件名"/>
+2 <meta name="xx" http-equiv="yy" scheme="zz "content*=""> 
+	xx:author/description/keywords/generator/revised/others 
+	yy:content-type/expires/refresh/set-cookie 把 content 属性关联到 HTTP 头部
+	zz:some_text 定义用于翻译 content 属性值的格式
+3 <input list="list"><datalist id="list"><option>	</></></> //自带过滤
+4 解决新增标签及css不起作用的js文件：html5 shiv.js，需要在<head>引入
+5 css重置normalize.css 封装css样式
+6 bootstrap 网页适配
+7 2017-5-6 <input>
+7.1 type:"color" html5调色盘===用户自定义css样式可用，需要有算法
+7.2 autocomplete="on/off" 匹配到<input>输入同一个，浏览器cookie存在的情况下，会自动罗列所有历时输入项
+7.3 聚焦....
+8 h5<video src="" controls autoplay w h preload></> 预加载与自动播放冲突，不能同时使用，muted静音有什么卯月嘛...,标准mpeg4,h246...格式：mp4,ogg
+8.1 <audio 同上></> //ogg,mp3,wav
+9 js选择器: .querySelector(All);
+			.classList return obj
+10 json用js描述(数据是原生js对象)，轻量级的文本数据交换格式，独立于语言，自我描述性，更易理解，比xml更优
+10.1 var obj1={}; var str1=JSON.stringify(obj1);//转化成字符串传回  var obj2=JSON.parse(str1); //再转对象
+10.2 json官网：json2，引入能支持大多主流浏览器
+10.3 xml:EXtensible Markup Language,没有预定义标签，用来传数据
+10.4 后台返回的过于繁琐时：json在线解析
+11 深克隆/深拷贝 ①有封装函数function cloneObj(obj){};②json 
+12 js函数 eval(str); 计算传入的串(功能强大：任意 实际用的不多：不安全)
+13 自定义数据命名方法data-xx，jq提供.data()方法，$(solector).data("xx");  若元素同事有.aa,.bb(data-aa-bb)两个对象，jq调用可以用aa-bb或aaBb
+	console.log(solecctor.dataset);返回键值对象
+14 <sciprt defer async/>
+ script 解析下载执行非并行
+ defer 优化解析下载可以同步执行，解析后执行(异步)
+ async 解析的同时可以下载，在下载后直接执行，然后继续解析，适合小文件并行，同时处理速度较快，否则无法保证加载顺序(异步)
+15 历史记录 ？
+	function(){ result.arr=location.hash;};//location.hash设置或返回从井号 (#) 开始的 URL（锚）。
+15.1 非5bom window.onhash=function(){}
+15.2 h5 f{} window.onpopstate=function(e){result.innerHTML=e.state;}
+16 return false;行为与冒泡 e.preventDefault();行为 e.stopPropagation();冒泡
+17 本地存储 -7-18-5MB-不随每次请求发送到服务端
+17.1 h5 localStorage - 没有时间限制的数据存储 ①.name="value"②.addItem("name",value);
+		.remove("name"); //单个 .clear();//All
+17.2 h5 sessionStorage - 针对session的数据存储 ，session实际是在服务端数据，只要在生命周期内就有效，仅仅不存储在本地而已
+18 l2d
+19 跨域：①域名不同②主域子域③端口号不同④协议不同
+19.1 xamipp:虚拟服务器
+19.2 服务器：硬件，软件
+19.3 同源策略
+	 extra* 短信验证；阿里大于，第三方提供api发送短信
+	 extra content deleivery network 内容分发网络，提供最近最快节点cdn.bootcss.com/... 阿里，腾讯等dalao都有提供节点
+19.4 src属性没有跨域问题
+19.5 方法一：jsonp原理：发送域<script src="接受域(不同信息可以用&连接)"> 	接受域：需要有指向文件
+19.6 方法二：这个现在已经不怎么用了<script>content</> <iframe src="接受地址" frameborder="0"//去掉自身阴影边框></>
+19.7 php格式：  <?php content ?> 嚯哟以后.html都写.php这么nb得吗？
+19.8 方法三：服务器代理？？？？？
+
+2017-7-26
+19.9 方法四：html5 .postMessgae
+
+canvas效果：echars(baidu);
+
+1 canvas啦!!:会自动开启GPU加速，需要JS渲染
+1.1 默认画板大小300*150
+1.2 2d初始化对象 var Canvas=d.gEBI("");var ctx=Canvas.getContext("2d");
+1.3 线段
+	ctx.moveTo(s,e);//起始坐标
+	ctx.lineTo(s,e);//线段终点
+	ctx.strokeStyle="color";//线段的
+	ctx.lineCap:"round";"square";"butt";//边缘样式
+1.4 圆弧
+	ctx.arcTo();
+	startAngel;endAngel;//e-s>0位顺时针
+2 webworker 
+3 requireJS
+3.1 r.js引入加data-main="入口文件"属性(文件属性名可以省略)
+	入口文件：①require(["引入文件名"],function($))
+			  ②requirejs.congfig({paths:{id:filename(全名)}) require(["id"],function)
+3.2 .constructor 构造函数
+	判断当前是否是数组：elem.constructor==Array&&elem instanceof Array
+3.3 模块声明define
+	yy.js:define1(function aa(){return bb;}) 
+	xx.js:define2(["yy"],function(bb){})
+3.4 
+4 seajs/requirejs区别
+  Sea：cmd(common)通用模块定义，用时定义(依赖就近)
+  Require：amd(asynchronization)异步模块定义，预先定义(依赖前置)，(现在也支持cmd的写法了)
+5 参数合并 jq：$.extend(默认项，合并项)
+6 代码段的应用 $().onload("代码段所在文件");
+7 js构造类
+  function xx(){this.attr="";};
+  xx.prototype.code=function(){};
+8 改变this指向①call②apply③bind
+8.1 .call(this改变的指向，有几个参数写几个参数value)
+8.2 .apply(改变的指向，[数组有几个参数写几个参数value])
+8.3 .bind(改变的指向)(调用的参数)
+
+
+
+
+ZZZZZZZZZZZZZZZZ
