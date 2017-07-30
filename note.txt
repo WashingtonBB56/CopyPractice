@@ -766,7 +766,7 @@ canvas效果：echars(baidu);
 3 requireJS
 3.1 r.js引入加data-main="入口文件"属性(文件属性名可以省略)
 	入口文件：①require(["引入文件名"],function($))
-			  ②requirejs.congfig({paths:{id:filename(全名)}) require(["id"],function)
+			  ②requirejs.congfig({paths:{id:filename(带不带后缀都可以))}) require(["id"],function)
 3.2 .constructor 构造函数
 	判断当前是否是数组：elem.constructor==Array&&elem instanceof Array
 3.3 模块声明define
@@ -776,7 +776,7 @@ canvas效果：echars(baidu);
 4 seajs/requirejs区别
   Sea：cmd(common)通用模块定义，用时定义(依赖就近)
   Require：amd(asynchronization)异步模块定义，预先定义(依赖前置)，(现在也支持cmd的写法了)
-5 参数合并 jq：$.extend(默认项，合并项)
+5 参数合并 jq：$.extend(默认项，合并项);
 6 代码段的应用 $().onload("代码段所在文件");
 7 js构造类
   function xx(){this.attr="";};
@@ -784,9 +784,11 @@ canvas效果：echars(baidu);
 8 改变this指向①call②apply③bind
 8.1 .call(this改变的指向，有几个参数写几个参数value)
 8.2 .apply(改变的指向，[数组有几个参数写几个参数value])
-8.3 .bind(改变的指向)(调用的参数)
+8.3 .bind(改变的指向)(调用的参数) 不会立即执行，触发时执行
+9 定义当元素不面向屏幕时是否可见css3
+  object.style.backfaceVisibility="hidden/visible"
+DC2？ 
 
-
-
+2017-7-29
 
 ZZZZZZZZZZZZZZZZ
