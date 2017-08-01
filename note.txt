@@ -650,7 +650,7 @@ $(function(){
   文本隐藏溢出（？）：overflow/white-space;nowrap;//不换行
   word-break:break-all;//强制换行
 7 字体 woff目前新兴格式：
-  @font-face xx声明，引用{font-family:xx;}
+  @font-face{font-family:'';src:url('')format('')}声明，引用{font-family:xx;}
 8 hsla 色调，饱和度 亮度 透明度 //程序猿不常用
 9 五环例子：新建五个环，伪元素复制，此时有十个环
   z-index更改层叠处关系，并调节上下左右部分透明度实现视觉套嵌
@@ -789,6 +789,43 @@ canvas效果：echars(baidu);
   object.style.backfaceVisibility="hidden/visible"
 DC2？ 
 
-2017-7-29
+2017-7-29 ps
+2017-7-31 移动端开发/可适应/流式布局
+1 2017-4-22
+2 头文件必要声明<head><meta name='viewport' content="width=devide-width">
+	其他可选声明：用户可缩放范围，最大最小缩放范围
+3 rem相对于html em相对于px,屏幕工艺不同，物理跟逻辑分辨率有实际差异
+4 媒体查询属性 <link>
+4.1 media='print' 当有当前属性的时候，打印的时候加载当前打印样式<link  media='print'/>
+4.2 根据宽度加载样式 media=('min-width/max-width:')
+4.3 常用切点breakpoint(屏幕分辨率)1200/992/768
+4.4 查询条件:声明方法，第二种，非切换文件方法	@media(){}
+4.5 横竖屏@media(orientation:landscape){}
+		  @media(orientation:portrait){}
+4.6 (device-pixel-ratio:2/3) 根据当前屏幕dpr来切换
+4.7 样式可以用or或逗号或and分隔
+4.8 部分属性有兼容性问题
+4.9 需要考虑权重问题，#100 .10 label1
+4.10 <img>宽高默认成比例-
+4.11 background h0; p-t:imgHeight/width%
+5 框架foundation/bootstrap
+6 <figure>显示图的，h5，块级
+7 段落居中：父元素display:table; 子元素display：table-cell;vertical-align：center;
+
+2017-8-1 
+1 zepto/jQ mobile/W3，jqm demo有汉化包
+2 jqm的js文件写在<head>里，先引入jq，然后当前页样式再引入jqm
+3 jqm-theme!
+4 移动端原生事件：touchstart ，touched，touchmove，touchcancel
+5 文档就绪$(document).on('pageinit',#id,function)
+6 ‘click’事件有300ms延迟(判断是否有双击需求)，‘tap’(非原生事件第三方封装)没有，移动端一般建议使用tap
+7 tap的bug：点透*
+7.1 解决方案1：fastclick.js
+8 文字域禁止更改大小 textarea{resize:none;}
+9 rem px=font-size(px)*rem
+9.1 rem.js
+
+
+
 
 ZZZZZZZZZZZZZZZZ
