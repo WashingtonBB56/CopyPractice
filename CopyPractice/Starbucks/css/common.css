@@ -7,9 +7,7 @@ html,body{
 }
 
 a {
-	background-color: transparent; 
 	text-decoration: none;
-    display: block;
 }
 
 a:active,a:hover {
@@ -26,5 +24,13 @@ ul,li{
 }
 
 .clearfix::after{
-	content:""; display:block;clear both;
+	content:""; 
+	display:block;
+	clear:both;
+}
+
+.container{
+	width: 1170px;
+    height: 100%;
+    margin: 0 auto;
 }
