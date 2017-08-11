@@ -1,0 +1,267 @@
+#who{
+    padding: 10px 0;
+    background-color:#F5F5F5;
+    height: 440px;
+}
+
+#who #w-h3{
+    display: block;
+    color: #666666;
+    height: 48px;
+    line-height: 48px;
+    padding: 10px 0;
+    font-size: 27px;
+    text-align: center;
+}
+
+#who .w-float{
+    height: 370px;
+}
+
+#who .left{
+    background: url("../image/about-bg.jpg")center no-repeat;
+    height: 367px;
+    width: 155px;
+    float: left;
+}
+
+#who .center{
+    padding-left: 25px;
+    margin-left: 155px;
+    width: 595px;
+    height: 367px;
+}
+
+#who .center .w-title{
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding: 10px 0;
+}
+
+#who .green{
+    color: #6AA84F;
+}
+
+#who .yellow{
+    color: #F1C232;
+}
+
+#who .blue{
+    color:#6D9EEB;
+}
+
+#who .w-text{
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #333333;
+}
+
+#who .right{
+    width: 239px;
+    height: 336px;
+    float: right;
+}
+
+#who .right .w-pic{
+    margin-top: 22px;
+}
+
+
+/*====================================================*/
+/*关于我们*/
+#Introduce {
+    height: 211px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #6d9eeb;
+}
+
+#Introduce .wrapper2 {
+    height: 221px;
+    padding-top: 10px;
+}
+
+#Introduce .intr {
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+#Introduce .in1 {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 35px;
+    height: 63px;
+    line-height: 63px;
+}
+
+#Introduce .in3 {
+    font-size: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px #fff solid;
+    height: 39px;
+    line-height: 39px;
+}
+
+#Introduce .in6 {
+    padding-top: 5px;
+    text-align: left;
+    font-size: 13px;
+    height: 60px;
+    line-height: 20px;
+}
+
+#Introduce .more {
+    display: block;
+    /*float: right;*/
+    line-height: 20px;
+    width: 100%;
+    height: 30px;
+    padding-top: 20px;
+    text-align: center;
+}
+/*====================================================*/
+#sign {
+    background-color: #F5F5F5;
+    height: 370px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#sign .wrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 360px;
+}
+#sign .float_layer{
+    height: 360px;
+    padding:5px 0;
+}
+/*===========================================*/
+#sign .s-left{
+    width: 600px;
+    height: 419px;
+    padding: 5px 0;
+    float: left;
+}
+
+#sign .s-up{
+    height: 198px;
+}
+
+#sign .s-up .up-img{
+    width: 128px;
+    height: 127px;
+    padding: 0 35px;
+    float: left;
+}
+/*===============================*/
+#sign .s-down{
+    height: 250px;
+}
+
+#sign .s-text{
+    width: 143px;
+    height: 237px;
+    padding: 10px 20px 0 30px;
+}
+
+#sign .left-f{
+    float: left;
+}
+
+#sign .right-f{
+    float: right;
+}
+
+#sign .title{
+    width: 143px;
+    /*font-size: ;*/
+}
+
+#sign .s-size{
+    width: 143px;
+    height: 184px;
+    /*font-size: ;*/
+}
+
+
+
+
+
+
+/*===================================*/
+/*试听*/
+#sign .contact {
+    float: left;
+    width: 335px;
+    height: 356px;
+}
+
+#sign .contract +h4{
+    width: 335px;
+    height: 32px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    line-height: 32px;
+}
+
+#sign #excel {
+    text-align: center;
+    float: left;
+    width: 333px;
+    height: 257px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border:1px dotted #666;
+}
+
+#excel .c-top{
+    margin-bottom: 5px;
+}
+
+#excel .contract .c-l{
+    display: block;
+    width: 260px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    color: #333333;
+}
+
+#excel .c-down{
+    width: 350px;
+    height: 28px;
+    text-indent: 5px;
+    margin-bottom: 5px;
+}
+
+#excel .in-border{
+    display: block;
+    margin: 0 30px;
+    width: 260px;
+    height: 28px;
+    outline: none;
+    text-indent: 5px;
+    overflow: hidden;
+    border: #ccc 1px dotted;
+}
+
+#excel .s-button{
+    width: 100px;
+    height: 25px;
+    outline: none;
+    outline: none;
+    background-color: #3c3b3b;
+    color: #fff;
+    border: 1px solid #3c3b3b;
+}
+
+#excel .s-button:hover{
+    background-color: #fff;
+    color: #3c3b3b;
+
+}
