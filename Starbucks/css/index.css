@@ -90,11 +90,11 @@
 	display:block;
 	width: 160px;
 	height: 40px;
-	background:url('../img/home/rewards_logo_20170209.svg')contain no-repeat;
+	background:url('../img/index/home/rewards_logo_20170209.svg')contain no-repeat;
 }
 /*==================================*/
 #download{
-	background: url('../img/home/app_bg.gif') repeat scroll center;
+	background: url('../img/index/home/app_bg.gif') repeat scroll center;
 	height:220px;
 }
 /*==================================*/
@@ -151,7 +151,7 @@
 	height:486px;
 }
 /*==================================*/
-online-order{
+#online-order{
 	background-color: #060608;
     padding: 40px 0;
 }
